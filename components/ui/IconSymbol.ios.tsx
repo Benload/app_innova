@@ -1,6 +1,20 @@
 import { SymbolView, SymbolViewProps, SymbolWeight } from 'expo-symbols';
 import { StyleProp, ViewStyle } from 'react-native';
 
+// Define the IconMapping type
+export interface IconMapping {
+  [key: string]: string;
+}
+
+// Export the mapping so it can be used elsewhere
+export const MAPPING = {
+  'house.fill': 'home',
+  'paperplane.fill': 'send',
+  'chevron.left.forwardslash.chevron.right': 'code',
+  'chevron.right': 'chevron-right',
+  'chart.bar.xaxis': 'bar-chart',
+} as IconMapping;
+
 export function IconSymbol({
   name,
   size = 24,
